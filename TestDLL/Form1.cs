@@ -189,7 +189,7 @@ namespace TestDLL
                 fileName = Path.GetFileNameWithoutExtension(filePath);
 
                 //MessageBox.Show(filePath.ToString());
-                textBox1.Text = fileName.ToString();
+                textBox1.Text = filePath.ToString();
                 Process.Start(fileName);
             }
 
