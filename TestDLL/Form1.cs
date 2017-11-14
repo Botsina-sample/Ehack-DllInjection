@@ -17,10 +17,15 @@ namespace TestDLL
     {
         public string filePath;
         public string fileName;
+        public string dllPath;
+        public string dllName;
+
 
         public Form1()
         {
             InitializeComponent();
+            label2.Visible = false;
+
         }
 
         [DllImport("kernel32")]
@@ -155,9 +160,11 @@ namespace TestDLL
             return;
         }
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            String strDLLName = "C:\\test.dll";
+            String strDLLName = dllPath;
             String strProcessName = fileName;
             
 
@@ -173,10 +180,16 @@ namespace TestDLL
                 }
                 else
                     InjectDLL(hProcess, strDLLName);
-                    MessageBox.Show("Inject success to " + strProcessName);
+                   
+                label2.Visible = true;
+                label2.Text = "Inject success to " + strProcessName;
+
+             
             }
         }
 
+
+        // browse to exe location
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog OpenThisFile = new OpenFileDialog();
@@ -203,6 +216,26 @@ namespace TestDLL
             //}
         }
 
- 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog OpenThisDLL = new OpenFileDialog();
+            if (OpenThisDLL.ShowDialog() == DialogResult.OK)
+            {
+
+                dllPath = OpenThisDLL.FileName;
+                
+                dllName = Path.GetFullPath(dllPath);
+
+                textBox2.Text = dllPath.ToString();
+
+
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+           
+
+        }
     }
 }
