@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -14,6 +15,9 @@ namespace TestDLL
 {
     public partial class Form1 : Form
     {
+        public string filePath;
+        public string fileName;
+
         public Form1()
         {
             InitializeComponent();
@@ -154,7 +158,8 @@ namespace TestDLL
         private void button1_Click(object sender, EventArgs e)
         {
             String strDLLName = "C:\\test.dll";
-            String strProcessName = "wordpad";
+            String strProcessName = fileName;
+            
 
 
             Int32 ProcID = GetProcessId(strProcessName);
@@ -168,8 +173,36 @@ namespace TestDLL
                 }
                 else
                     InjectDLL(hProcess, strDLLName);
-                    MessageBox.Show("Inject success");
+                    MessageBox.Show("Inject success to " + strProcessName);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog OpenThisFile = new OpenFileDialog();
+
+
+            if(OpenThisFile.ShowDialog() == DialogResult.OK)
+            {
+                
+                filePath = OpenThisFile.FileName;
+                fileName = Path.GetFileNameWithoutExtension(filePath);
+
+                //MessageBox.Show(filePath.ToString());
+                textBox1.Text = fileName.ToString();
+                Process.Start(fileName);
+            }
+
+
+            //FolderBrowserDialog browser = new FolderBrowserDialog();
+            //string tempPath = "";
+
+            //if (browser.ShowDialog() == DialogResult.OK)
+            //{
+            //    tempPath = browser.SelectedPath; // prints path
+            //}
+        }
+
+ 
     }
 }
