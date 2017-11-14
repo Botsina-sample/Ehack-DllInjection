@@ -179,10 +179,12 @@ namespace TestDLL
                     return;
                 }
                 else
-                    InjectDLL(hProcess, strDLLName);
-                   
                 label2.Visible = true;
-                label2.Text = "Inject success to " + strProcessName;
+                label2.Text = "Injected successfully to " + strProcessName;
+                InjectDLL(hProcess, strDLLName);
+                   
+                
+                
 
              
             }
@@ -197,7 +199,7 @@ namespace TestDLL
 
             if(OpenThisFile.ShowDialog() == DialogResult.OK)
             {
-                
+
                 filePath = OpenThisFile.FileName;
                 fileName = Path.GetFileNameWithoutExtension(filePath);
 
