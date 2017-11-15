@@ -179,8 +179,9 @@ namespace TestDLL
                     return;
                 }
                 else
-                label2.Visible = true;
-                label2.Text = "Injected successfully to " + strProcessName;
+                    label2.Visible = true;
+                    label2.Text = "Injected successfully to " + strProcessName;
+           
                 InjectDLL(hProcess, strDLLName);
                    
                 
