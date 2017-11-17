@@ -7,8 +7,7 @@
 using namespace std;
 
 
-int main()
+VOID main()
 {
 	MessageBox(NULL, L"Hello World!", L"Test", MB_OK);
-	return 0;
 }

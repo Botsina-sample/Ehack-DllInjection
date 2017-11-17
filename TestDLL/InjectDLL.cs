@@ -126,7 +126,7 @@ namespace TestDLL
 
 
             // Sleep thread for 1 second
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(500);
             // Clear up allocated space ( Allocmem )
             VirtualFreeEx(hProcess, AllocMem, (UIntPtr)0, 0x8000);
             // Make sure thread handle is valid before closing... prevents crashes.
