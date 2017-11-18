@@ -22,8 +22,8 @@ namespace TestDLL
 
             InitializeComponent();
             label2.Visible = false;
-            this.MaximumSize = this.Size;
-            this.MinimumSize = this.Size;
+            //this.MaximumSize = this.Size;
+            //this.MinimumSize = this.Size;
         }
 
         
@@ -124,6 +124,9 @@ namespace TestDLL
 
         }
 
-   
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

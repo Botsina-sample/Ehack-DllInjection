@@ -10,7 +10,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
 	{
 	case DLL_PROCESS_ATTACH:
 		
-		MessageBox(NULL, L"Hello World!", L"Test", MB_OK);
+		MessageBox(NULL, L"Hello from notepad!", L"notepad", MB_OK);
 
 
 	case DLL_THREAD_ATTACH:

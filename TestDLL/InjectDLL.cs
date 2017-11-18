@@ -107,26 +107,26 @@ namespace TestDLL
 
 
 
-            //// Time-out is 10 seconds...
-            //int Result = WaitForSingleObject(hThread, 10 * 1000);
-            //// Check whether thread timed out...
-            //if (Result == 0x00000080L || Result == 0x00000102L || Result == 0xFFFFFFFF)
-            //{
-            //    /* Thread timed out... */
-            //    MessageBox.Show(" hThread [ 2 ] Error! \n ");
-            //    // Make sure thread handle is valid before closing... prevents crashes.
-            //    if (hThread != null)
-            //    {
-            //        //Close thread in target process
-            //        CloseHandle(hThread);
-            //    }
-            //    return;
-            //}
+            // Time-out is 10 seconds...
+            int Result = WaitForSingleObject(hThread, 10 * 1000);
+            // Check whether thread timed out...
+            if (Result == 0x00000080L || Result == 0x00000102L || Result == 0xFFFFFFFF)
+            {
+                /* Thread timed out... */
+                MessageBox.Show(" hThread [ 2 ] Error! \n ");
+                // Make sure thread handle is valid before closing... prevents crashes.
+                if (hThread != null)
+                {
+                    //Close thread in target process
+                    CloseHandle(hThread);
+                }
+                return;
+            }
 
 
 
             // Sleep thread for 1 second
-            System.Threading.Thread.Sleep(500);
+            System.Threading.Thread.Sleep(1000);
             // Clear up allocated space ( Allocmem )
             VirtualFreeEx(hProcess, AllocMem, (UIntPtr)0, 0x8000);
             // Make sure thread handle is valid before closing... prevents crashes.
