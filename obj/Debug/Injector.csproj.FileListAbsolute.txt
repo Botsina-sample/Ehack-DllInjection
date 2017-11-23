@@ -1,0 +1,15 @@
+C:\Users\Viet\Desktop\DLL-INJECT\bin\Debug\Injector64.exe.config
+C:\Users\Viet\Desktop\DLL-INJECT\obj\Debug\Injector.csprojResolveAssemblyReference.cache
+C:\Users\Viet\Desktop\DLL-INJECT\obj\Debug\TestDLL.Form1.resources
+C:\Users\Viet\Desktop\DLL-INJECT\obj\Debug\Injector.Properties.Resources.resources
+C:\Users\Viet\Desktop\DLL-INJECT\obj\Debug\Injector.csproj.GenerateResource.Cache
+C:\Users\Viet\Desktop\DLL-INJECT\bin\Debug\Injector64.exe.manifest
+C:\Users\Viet\Desktop\DLL-INJECT\bin\Debug\Injector64.application
+C:\Users\Viet\Desktop\DLL-INJECT\bin\Debug\Injector64.exe
+C:\Users\Viet\Desktop\DLL-INJECT\bin\Debug\Injector64.pdb
+C:\Users\Viet\Desktop\DLL-INJECT\bin\Debug\ManagedInjector64-4.0.dll
+C:\Users\Viet\Desktop\DLL-INJECT\bin\Debug\ManagedInjector64-4.0.pdb
+C:\Users\Viet\Desktop\DLL-INJECT\obj\Debug\Injector64.exe.manifest
+C:\Users\Viet\Desktop\DLL-INJECT\obj\Debug\Injector64.application
+C:\Users\Viet\Desktop\DLL-INJECT\obj\Debug\Injector64.exe
+C:\Users\Viet\Desktop\DLL-INJECT\obj\Debug\Injector64.pdb
