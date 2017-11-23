@@ -150,6 +150,27 @@ namespace TestDLL
             }
             while (Process.GetProcessesByName(apps).Length < 0);
         }
+
+
+        // broswe to app's location
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog theDialog = new OpenFileDialog();
+
+            //Filter for EXE
+            theDialog.Title = "Open Exe File";
+            theDialog.Filter = "EXE files|*.exe";
+            //theDialog.InitialDirectory = @"C:\";
+
+            if (theDialog.ShowDialog() == DialogResult.OK)
+            {
+                var selectedFile = Path.GetFileNameWithoutExtension(theDialog.FileName);
+                textBox1.Text = theDialog.FileName;
+                //MessageBox.Show(selectedFile);
+                Process.Start(selectedFile);
+            }
+        }
+
     }
 
     public class Loader
@@ -158,5 +179,6 @@ namespace TestDLL
         {
             MessageBox.Show("Inject successful");
         }
-    }
+
+    } 
 }
