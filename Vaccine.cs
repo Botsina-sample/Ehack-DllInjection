@@ -17,13 +17,13 @@ namespace Injector
         public static void Nexus()
         {
 
-            MessageBox.Show("Injected");
+            MessageBox.Show("Injected", "WARNING!!!");
 
 
             var currentProcName = Process.GetCurrentProcess();
-            Thread.Sleep(1000);
-            MessageBox.Show(currentProcName.ToString());
-
+            Thread.Sleep(500);
+            MessageBox.Show(currentProcName.ToString(), "Proc name");
+            
         }
     }
 }
