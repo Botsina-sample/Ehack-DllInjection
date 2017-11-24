@@ -126,8 +126,8 @@ namespace TestDLL
                 Process.Start(application);
 
 
-                //Thread.Sleep(1000);
-                //doInject(application);
+                Thread.Sleep(1000);
+                doInject(application);
 
             }).Start();
 
@@ -171,6 +171,10 @@ namespace TestDLL
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 
     public class Loader
