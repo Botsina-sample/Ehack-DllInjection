@@ -49,19 +49,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FRmnThquPhgWuZnVErTyoYJXvQ3XVVe/n65k6O0Mu+w=</dsig:DigestValue>
+        <dsig:DigestValue>K4zWv3CU7kciMsGuK0olZ7ilJO/PFIB6aDjHXdPDSBQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ManagedInjector64-4.0.dll" size="73728">
-      <assemblyIdentity name="ManagedInjector64-4.0" version="1.0.6537.2855" language="neutral" processorArchitecture="amd64" />
+      <assemblyIdentity name="ManagedInjector64-4.0" version="1.0.6537.16135" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7nmc6m7Ltdepm6bMG9Szl+3NNteQPGiD5bz5n7Gt6uk=</dsig:DigestValue>
+        <dsig:DigestValue>rbcMVDbFl+QXGAFOAbAGYmuKufoL8PmiurRIfNlIXLY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -160,7 +160,7 @@ namespace TestDLL
             //Filter for EXE
             theDialog.Title = "Open Exe File";
             theDialog.Filter = "EXE files|*.exe";
-            //theDialog.InitialDirectory = @"C:\";
+            theDialog.InitialDirectory = @"C:\";
 
             if (theDialog.ShowDialog() == DialogResult.OK)
             {
@@ -175,14 +175,21 @@ namespace TestDLL
         {
             Application.Restart();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class Loader
     {
         public static void Inject()
         {
-            MessageBox.Show("Inject successful");
+            MessageBox.Show("Inject successful ", "WARNING!!!");
+ 
         }
+
 
     } 
 }

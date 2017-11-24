@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Injector64.exe" size="12288">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Injector64.exe" size="12800">
       <assemblyIdentity name="Injector64" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>K4zWv3CU7kciMsGuK0olZ7ilJO/PFIB6aDjHXdPDSBQ=</dsig:DigestValue>
+        <dsig:DigestValue>FVY89RHc1xXYnNnLuGnTJwKUoDx04cNqpIFvsE/VdMo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
