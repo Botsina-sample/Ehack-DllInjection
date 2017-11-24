@@ -27,6 +27,7 @@ namespace TestDLL
 
         public static string notify;
 
+
         Actions act = new Actions();
 
         public enum _apps
@@ -46,12 +47,12 @@ namespace TestDLL
         {
 
             InitializeComponent();
-            label2.Visible = false;
+
 
             
         }
 
-        // INject button
+        // Inject button
         private void button1_Click(object sender, EventArgs e)
         {
             var temp = chosenApp;
@@ -63,6 +64,7 @@ namespace TestDLL
                     new Thread(() =>
                     {
                         act.doInject(_apps.notepad.ToString());
+
                     }).Start();
 
                     break;
@@ -115,8 +117,10 @@ namespace TestDLL
             theDialog.Filter = "EXE files|*.exe";
             theDialog.InitialDirectory = @"C:\";
 
+            // open dialog
             if (theDialog.ShowDialog() == DialogResult.OK)
             {
+
                 AppByBrowse = Path.GetFileNameWithoutExtension(theDialog.FileName);
                 textBox1.Text = theDialog.FileName;
                        

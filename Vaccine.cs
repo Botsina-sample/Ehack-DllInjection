@@ -13,7 +13,7 @@ namespace Injector
 {
     class Vaccine
     {
-        
+     
         public static void Nexus()
         {
 
@@ -23,7 +23,10 @@ namespace Injector
             var currentProcName = Process.GetCurrentProcess();
             Thread.Sleep(500);
             MessageBox.Show(currentProcName.ToString(), "Proc name");
-            
+
+
+            Form1.notify = "Hello";
         }
+
     }
 }
