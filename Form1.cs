@@ -115,7 +115,7 @@ namespace TestDLL
             //Filter for EXE
             theDialog.Title = "Open an Application";
             theDialog.Filter = "EXE files|*.exe";
-            theDialog.InitialDirectory = @"C:\";
+            theDialog.InitialDirectory = @"C:\Users\davis\Desktop\test";
 
             // open dialog
             if (theDialog.ShowDialog() == DialogResult.OK)
@@ -124,7 +124,7 @@ namespace TestDLL
                 AppByBrowse = Path.GetFileNameWithoutExtension(theDialog.FileName);
                 textBox1.Text = theDialog.FileName;
                        
-                act.openApp(AppByBrowse);
+                act.openApp(theDialog.FileName);
 
             }
         }
