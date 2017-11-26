@@ -13,19 +13,20 @@ namespace Injector
 {
     class Vaccine
     {
-        public static string _currentProcName;
+        //public static string _currentProcName;
 
 
 
 
         public static void Nexus()
         {
-
             MessageBox.Show("Injected", "WARNING!!!");
 
             Form f = Application.OpenForms.Cast<Form>().Last();
 
             Type fType = f.GetType();
+
+
 
             //MemberInfo[] props = 
 
@@ -34,7 +35,9 @@ namespace Injector
             Button b1 = (Button)fieldButton1.GetValue(f);
 
             b1.Text = "Haha";
-        }
 
+
+        }
+        
     }
 }

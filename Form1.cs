@@ -122,6 +122,7 @@ namespace TestDLL
             {
 
                 AppByBrowse = Path.GetFileNameWithoutExtension(theDialog.FileName);
+
                 textBox1.Text = theDialog.FileName;
                        
                 act.openApp(theDialog.FileName);
@@ -139,7 +140,9 @@ namespace TestDLL
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             act.openApp(_apps.notepad.ToString());
+
             chosenApp = (int) _apps.notepad;
+
             //MessageBox.Show(chosenApp.ToString());
         }
 
