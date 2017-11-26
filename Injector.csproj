@@ -31,7 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -125,9 +125,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ManagedInjector\ManagedInjector64-4.0.vcxproj">
-      <Project>{a27c8b34-2527-4258-8c07-d2720c576b90}</Project>
-      <Name>ManagedInjector64-4.0</Name>
+    <ProjectReference Include="..\..\..\Desktop\ManagedInjector\ManagedInjector32-4.0.vcxproj">
+      <Project>{8072b47b-5611-4bab-8ef4-cb3125d676a5}</Project>
+      <Name>ManagedInjector32-4.0</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
