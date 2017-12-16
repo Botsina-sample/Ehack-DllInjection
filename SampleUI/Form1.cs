@@ -26,7 +26,7 @@ namespace SampleUI
 
             Type fType = f.GetType();
 
-            //MemberInfo[] props = 
+            //MemberInfo[] props
 
             var fieldButton1 = fType.GetField("button1", BindingFlags.NonPublic | BindingFlags.GetField | BindingFlags.Instance);
 
@@ -37,6 +37,21 @@ namespace SampleUI
             var events = (EventHandlerList) b1.GetType().GetProperty("Events", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(b1);
             //events
             MessageBox.Show("ABC");
+        }
+
+        private void ediToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("hello");
         }
     }
 }
