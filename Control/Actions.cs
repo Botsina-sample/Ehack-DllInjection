@@ -39,13 +39,13 @@ namespace Injector
 
         public void doInject(string apps)
         {
-            do
-            {
-                var proc = Process.GetProcessesByName(apps).FirstOrDefault();
-                ManagedInjector.Injector.Launch(proc.MainWindowHandle,
-                    typeof(Vaccine).Assembly.Location,
-                    typeof(Vaccine).FullName, "Nexus");
-            } while (Process.GetProcessesByName(apps).Length < 0);
+            //do
+            //{
+            //    var proc = Process.GetProcessesByName(apps).FirstOrDefault();
+            //    ManagedInjector.Injector.Launch(proc.MainWindowHandle,
+            //        typeof(Vaccine).Assembly.Location,
+            //        typeof(Vaccine).FullName, "Nexus");
+            //} while (Process.GetProcessesByName(apps).Length < 0);
         }
 
 

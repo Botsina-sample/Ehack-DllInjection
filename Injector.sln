@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Injector", "Injector.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleUI", "SampleUI\SampleUI.csproj", "{8C9472CF-D5D4-4235-AD60-98E53752AB7F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ManagedInjector32-4.0", "ManagedInjector\ManagedInjector32-4.0.vcxproj", "{8072B47B-5611-4BAB-8EF4-CB3125D676A5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,14 +41,6 @@ Global
 		{8C9472CF-D5D4-4235-AD60-98E53752AB7F}.Release|x64.Build.0 = Release|Any CPU
 		{8C9472CF-D5D4-4235-AD60-98E53752AB7F}.Release|x86.ActiveCfg = Release|Any CPU
 		{8C9472CF-D5D4-4235-AD60-98E53752AB7F}.Release|x86.Build.0 = Release|Any CPU
-		{8072B47B-5611-4BAB-8EF4-CB3125D676A5}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{8072B47B-5611-4BAB-8EF4-CB3125D676A5}.Debug|x64.ActiveCfg = Debug|Win32
-		{8072B47B-5611-4BAB-8EF4-CB3125D676A5}.Debug|x86.ActiveCfg = Debug|Win32
-		{8072B47B-5611-4BAB-8EF4-CB3125D676A5}.Debug|x86.Build.0 = Debug|Win32
-		{8072B47B-5611-4BAB-8EF4-CB3125D676A5}.Release|Any CPU.ActiveCfg = Release|Win32
-		{8072B47B-5611-4BAB-8EF4-CB3125D676A5}.Release|x64.ActiveCfg = Release|Win32
-		{8072B47B-5611-4BAB-8EF4-CB3125D676A5}.Release|x86.ActiveCfg = Release|Win32
-		{8072B47B-5611-4BAB-8EF4-CB3125D676A5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
