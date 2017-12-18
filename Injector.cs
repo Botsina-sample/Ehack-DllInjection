@@ -29,27 +29,15 @@ namespace TestDLL
 
 
         Actions act = new Actions();
-
-        public enum _apps
-        {
-            windows,
-            /// <summary>
-            /// ////////////
-            /// </summary>
-
-            notepad,
-            wordpad,
-            calc,
-            mspaint
-        }
+        message mess = new message("dade");
 
         public Form1()
         {
 
             InitializeComponent();
-            groupBox3.Enabled = false;
-            groupBox1.Enabled = false;
-            openSampleUI(@"C:\Users\EDI\Documents\GitHub\Ehack-DllInjection\SampleUI\bin\Debug\SampleUI.exe");
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            //openSampleUI(@"C:\Users\EDI\Documents\GitHub\Ehack-DllInjection\SampleUI\bin\Debug\SampleUI.exe");
         }
 
         public void openSampleUI(string path)
@@ -62,51 +50,13 @@ namespace TestDLL
         // Inject button
         private void button1_Click(object sender, EventArgs e)
         {
-            var temp = chosenApp;
-            //MessageBox.Show(temp.ToString());
-            switch (temp)
-            {
-
-                case 1:
-                    new Thread(() =>
-                    {
-                        act.doInject(_apps.notepad.ToString());
-
-                    }).Start();
-
-                    break;
-
-                case 2:
-                    new Thread(() =>
-                    {;
-                        act.doInject(_apps.wordpad.ToString());
-                    }).Start();
-
-                    break;
-                case 3:
-                    new Thread(() =>
-                    {
-                        act.doInject(_apps.calc.ToString());
-                    }).Start();
-
-                    break;
-                case 4:
-                    new Thread(() =>
-                    {
-                        act.doInject(_apps.mspaint.ToString());
-                    }).Start();
-
-                    break;
-
-                default:
-                    //MessageBox.Show("Not supported");
+           
                     new Thread(() =>
                     {
                         act.doInject(AppByBrowse);
                     }).Start();
-
-                    break;
-            }
+            
+            
         }
 
 
@@ -118,11 +68,13 @@ namespace TestDLL
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog theDialog = new OpenFileDialog();
-
+  
             //Filter for EXE
             theDialog.Title = "Open an Application";
             theDialog.Filter = "EXE files|*.exe";
-            theDialog.InitialDirectory = @"C:\Users\davis\Desktop\test";
+
+            // Default directory
+            //theDialog.InitialDirectory = @"C:\Users\davis\Desktop\test";
 
             // open dialog
             if (theDialog.ShowDialog() == DialogResult.OK)
@@ -134,7 +86,10 @@ namespace TestDLL
 
                 act.openApp(theDialog.FileName);
 
+                
+
             }
+
         }
 
 
@@ -144,39 +99,37 @@ namespace TestDLL
             Application.Restart();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            act.openApp(_apps.notepad.ToString());
-
-            chosenApp = (int)_apps.notepad;
-
-            //MessageBox.Show(chosenApp.ToString());
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            act.openApp(_apps.wordpad.ToString());
-            chosenApp = (int)_apps.wordpad;
-            //MessageBox.Show(chosenApp.ToString());
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            act.openApp(_apps.calc.ToString());
-            chosenApp = (int)_apps.calc;
-            //MessageBox.Show(chosenApp.ToString());
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-            act.openApp(_apps.mspaint.ToString());
-            chosenApp = (int)_apps.mspaint;
-            //MessageBox.Show(chosenApp.ToString());
-        }
+      
 
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Process[] processlist = Process.GetProcesses();
+            
+
+
+            foreach (Process theprocess in processlist)
+            {
+                
+                //Console.WriteLine(“Process: { 0}
+                //ID: { 1}”, theprocess.ProcessName, theprocess.Id
+                listBox1.Items.Add(theprocess.ProcessName + "..............." + theprocess.Id);
+                
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Add(act._is64.ToString());
         }
     }
 }

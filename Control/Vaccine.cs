@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Diagnostics;
-using System.Threading;
-using TestDLL;
-using System.Reflection;
+
+using TestStack.White;
+using TestStack.White.Factory;
+using TestStack.White.UIItems;
+using TestStack.White.UIItems.Finders;
+using TestStack.White.UIItems.WindowItems;
 
 namespace Injector
 {
@@ -20,21 +23,30 @@ namespace Injector
 
         public static void Nexus()
         {
-            MessageBox.Show("Injected", "WARNING!!!");
 
-            Form f = Application.OpenForms.Cast<Form>().Last();
+            System.Windows.Forms.MessageBox.Show("Injected", "WARNING!!!");
 
-            Type fType = f.GetType();
+            //var currentproc = Process.GetCurrentProcess();
+
+            //var currentprocID = currentproc.Id;
 
 
 
-            //MemberInfo[] props = 
+            //try
+            //{
+            //    Application application = Application.Attach(currentprocID);
+            //    Window window = application.GetWindow("Form1", InitializeOption.NoCache);
+            //} catch (Exception ex)
+            //{
+            //    string filePath = @"D:\Error.txt";
 
-            var fieldButton1 = fType.GetField("button1", BindingFlags.NonPublic | BindingFlags.GetField | BindingFlags.Instance);
-
-            Button b1 = (Button)fieldButton1.GetValue(f);
-
-            b1.Text = "Haha";
+            //    using (StreamWriter writer = new StreamWriter(filePath, true))
+            //    {
+            //        writer.WriteLine("Message :" + ex.Message + "<br/>" + Environment.NewLine + "StackTrace :" + ex.StackTrace +
+            //           "" + Environment.NewLine + "Date :" + DateTime.Now.ToString());
+            //        writer.WriteLine(Environment.NewLine + "-----------------------------------------------------------------------------" + Environment.NewLine);
+            //    }
+            //}
 
 
         }
